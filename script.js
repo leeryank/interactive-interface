@@ -7,11 +7,11 @@ let effectEnabled = true;
 let hue = 0;
 let allowTrail = true;
 
-// Mouse movement effect (now tilts in the correct direction)
+// Mouse movement effect
 document.addEventListener('mousemove', (e) => {
     if (effectEnabled) {
-        let xAxis = (e.pageX - window.innerWidth / 2) / 25; // Move in the correct direction
-        let yAxis = (window.innerHeight / 2 - e.pageY) / 25; // Move in the correct direction
+        let xAxis = (e.pageX - window.innerWidth / 2) / 25; 
+        let yAxis = (window.innerHeight / 2 - e.pageY) / 25; 
         card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
     }
 
